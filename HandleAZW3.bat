@@ -14,8 +14,8 @@ for /d %%A in ("%parent_folder%\*") do (
             del temp.txt
             for /f "tokens=4" %%N in ("!output!") do (
                 calibredb export "%%N" --dont-asciiize --dont-save-cover --dont-save-extra-files --dont-update-metadata --dont-write-opf --template "{title}" --formats azw3 --to-dir "%%A"
+                calibredb remove "%%N" --permanent
             )
-            calibredb remove "%%N" --permanent
         )
     )
 )
