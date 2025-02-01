@@ -1,7 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 
-set "parent_folder=C:\Users\hoang\OneDrive - MSFT\Documents\My Kindle Content"
+set "parent_folder=%USERPROFILE%\Documents\My Kindle Content"
 
 for /d %%A in ("%parent_folder%\*") do (
     if /i not "%%~nxA"=="NoteDocuments" (
